@@ -27,22 +27,35 @@ WHEN I complete a workout
 
 THEN I am able to log my workout 
 
+![Workout log]()
+
 WHEN I want to compare my progression 
 
 THEN I am able to view my previously logged workouts
 
 WHEN I want to compare my current strength to my past strength 
 
+![Strengths]()
+
 THEN I am able to view all of my PRs (personal records)
 
-WHEN I want view other member's workouts
+![Saved logs]()
+
+WHEN I want to view other member's workouts
 
 THEN I am able to go to their profile and view their logged workouts
+
+![Other Gym Members]()
 
 WHEN I want to motivate other members
 
 THEN I am able to react to their logged workout as well as leave comments
 
+![Motivation Reaction]()
+
+[Deployed Application](https://git.heroku.com/work-your-app-off.git)
+
+[GitHub Repo](https://github.com/arellanoe/workit-app)
 
 ## Credits
 Eduardo Arellano
