@@ -1,70 +1,69 @@
-# Getting Started with Create React App
+# Work-It!
+A workout app to post blogs
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## User Story
 
-## Available Scripts
+AS a fitness fanatic
+I WANT to easily track and promote my daily workouts, weight-ins, max lifts, and have access to other athlete's profiles so that I can compare results as well as provide motivation and encouragement to other members of my community. 
 
-In the project directory, you can run:
+## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+- [Credits](#credits)
+- [License](#license)
 
-### `npm start`
+## Installation
+* npm i
+* npm start
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Usage
+# Acceptance Criteria
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+GIVEN I AM a gym member 
 
-### `npm test`
+WHEN I complete a workout 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+THEN I am able to log my workout 
 
-### `npm run build`
+WHEN I want to compare my progression 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+THEN I am able to view my previously logged workouts
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+WHEN I want to compare my current strength to my past strength 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+THEN I am able to view all of my PRs (personal records)
 
-### `npm run eject`
+WHEN I want view other member's workouts
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+THEN I am able to go to their profile and view their logged workouts
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+WHEN I want to motivate other members
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+THEN I am able to react to their logged workout as well as leave comments
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+## Credits
+Eduardo Arellano
+[GitHub]()
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Marlana Clemente
+[GitHub]()
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Marquise Gordon
+[GitHub]()
 
-### Code Splitting
+Geovana Prado Kidwell
+[GitHub]()
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Jacquelyn Pulliam
+[GitHub](https://github.com/JacquieSue)
 
-### Analyzing the Bundle Size
+Shannon Alegre Puno
+[GitHub]()
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Griffin Woodson
+[GitHub]()
 
-### Making a Progressive Web App
+## License
+MIT License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
