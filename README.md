@@ -3,8 +3,11 @@ A workout app to post blogs
 
 ## User Story
 
-AS a fitness fanatic
-I WANT to easily track and promote my daily workouts, weight-ins, max lifts, and have access to other athlete's profiles so that I can compare results as well as provide motivation and encouragement to other members of my community. 
+AS A fitness fanatic
+
+I WANT TO easily track and promote my daily workouts, weight-ins, max lifts, and have access to other athlete's profiles 
+
+SO THAT I can compare results as well as provide motivation and encouragement to other members of my community. 
 
 ## Table of Contents
 - [Installation](#installation)
@@ -16,8 +19,7 @@ I WANT to easily track and promote my daily workouts, weight-ins, max lifts, and
 * npm i
 * npm start
 
-## Usage
-# Acceptance Criteria
+## Acceptance Criteria
 
 GIVEN I AM a gym member 
 
