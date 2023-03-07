@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import styled from 'styled-components';
-import Homepage from './components/Homepage';
+import Login from './components/Login';
 
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
       <header className="App-header">
         <Main>
           <Switch>
-            <Route path='/' exact component={Homepage} />
+            <Route path='/' exact component={Login} />
           </Switch>
         </Main>
       </header>
