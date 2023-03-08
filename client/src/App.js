@@ -1,20 +1,25 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import styled from 'styled-components';
 import Login from './components/Login';
+import Homepage from './components/Homepage';
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
+
 
 
 function App() {
   return (
-    <Router>
+    <BrowserRouter>
       <header className="App-header">
         <Main>
-          <Switch>
-            <Route path='/' exact component={Login} />
-          </Switch>
+          <Routes>
+            <Route path='/login' element={<Login />} />
+            <Route path='/home' element={< Homepage />} />
+          </Routes>
         </Main>
       </header>
-    </Router>
+    </BrowserRouter>
   );
 }
 
