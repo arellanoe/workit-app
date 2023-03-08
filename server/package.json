@@ -1,7 +1,7 @@
 {
   "name": "workout-app",
   "version": "1.0.0",
-  "description": "",
+  "description": "A workout app to post blogs",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
