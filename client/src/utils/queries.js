@@ -5,7 +5,8 @@ export const GET_USER = gql`
         users {
                 _id
                 email
-                post
+                posts
         }
     }
 `;
+

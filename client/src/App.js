@@ -2,7 +2,6 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink, } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
-import styled from 'styled-components';
 import Homepage from './components/Homepage';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
@@ -31,9 +30,7 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <>
-        <Switch>
           <Route exact path='/' component={Homepage} />
-        </Switch>
         </>
       </Router>
     </ApolloProvider>

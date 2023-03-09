@@ -6,10 +6,11 @@ import { GET_USER } from '../utils/queries';
 
 
 
-const User = ({ user: { username }}) => (
+
+const User = ({ user: { email }}) => (
     <Card>
         <Card.Body>
-            <Card.Title>{username}</Card.Title>
+            <Card.Title>{email}</Card.Title>
         </Card.Body>
     </Card>
 )
