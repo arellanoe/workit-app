@@ -59,25 +59,25 @@ THEN I am able to react to their logged workout as well as leave comments
 
 ## Credits
 Eduardo Arellano
-[GitHub]()
+[GitHub](https://github.com/arellano)
 
 Marlana Clemente
-[GitHub]()
+[GitHub](https://github.com/Mclemente15)
 
 Marquise Gordon
-[GitHub]()
+[GitHub](https://github.com/marquisegordon)
 
 Geovana Prado Kidwell
-[GitHub]()
+[GitHub](https://github.com/Pradogeovana07)
 
 Jacquelyn Pulliam
 [GitHub](https://github.com/JacquieSue)
 
 Shannon Alegre Puno
-[GitHub]()
+[GitHub](https://github.com/shannonpuno)
 
 Griffin Woodson
-[GitHub]()
+[GitHub](https://github.com/griffin-woodson)
 
 ## License
 MIT License
