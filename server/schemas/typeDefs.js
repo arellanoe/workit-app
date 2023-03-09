@@ -3,7 +3,7 @@ const { gql } = require('apollo-server-express');
 const typeDefs = gql`
   type User {
     _id: ID
-    email: String
+    email: String!
     password: String
     posts: [Post]!
   }
@@ -14,18 +14,18 @@ const typeDefs = gql`
     createdat: String
   }
   type Auth {
-    token: ID!
+    token: ID
     user: User
   }
   type Query {
     users: [User]
-    email(email: String!): email
     post(email: String): [Post]
   }
   type Mutation {
-    addUser( email: String!, password: String!): Auth
+    addUser(email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
     addPost(posttext: String!): Post
+  }
 `;
 // addComment(
 //     thoughtId: ID!
@@ -35,5 +35,5 @@ const typeDefs = gql`
 //   removeThought(thoughtId: ID!): Thought
 //   removeComment(thoughtId: ID!, commentId: ID!): Thought
 // }
-
+// I removed     email(email: String!): email from type query
 module.exports = typeDefs;

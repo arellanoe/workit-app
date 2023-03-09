@@ -7,13 +7,13 @@ const resolvers = {
     users: async () => {
       return User.find().populate('post');
     },
-    user: async (parent, { email }) => {
-      return User.findOne({ email }).populate('post');
-    },
-    posts: async (parent, { email }) => {
-      const params = email ? { email } : {};
-      return Post.find(params).sort({ createdAt: -1 });
-    },
+    //user: async (parent, { email }) => {
+     // return User.findOne({ email }).populate('post');
+   // },
+    //posts: async (parent, { email }) => {
+     // const params = email ? { email } : {};
+     // return Post.find(params).sort({ createdAt: -1 });
+  //  },
     post: async (parent, { postid }) => {
       return Post.findOne({ _id: postid });
     },
@@ -64,9 +64,9 @@ const resolvers = {
     //     }
     //   );
     // },
-    removePost: async (parent, { postid }) => {
-      return Thought.findOneAndDelete({ _id: postid });
-    },
+    //removePost: async (parent, { postid }) => {
+  //    return Thought.findOneAndDelete({ _id: postid });
+   // },
     // removeComment: async (parent, { thoughtId, commentId }) => {
     //   return Thought.findOneAndUpdate(
     //     { _id: thoughtId },

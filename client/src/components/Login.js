@@ -1,40 +1,91 @@
-import React from "react";
-import "app.css";
+import React, { useState } from "react";
+import { Form, Button, Alert } from 'react-bootstrap';
 
-function Login () {
+import {LOGIN_USER } from '../utils/mutations';
+import { useMutation } from "@apollo/client";
+import Auth from '../utils/auth';
+
+const Login = () => {
+    const [userFormData, setUserFormData] = useState({ email: '', password: '' });
+    const [validated] = useState(false);
+    const [showAlert, setShowAlert] = useState(false);
+    // LOGIN_USER mutation functionality
+    const [login, { error }] = useMutation(LOGIN_USER);
+  
+    const handleInputChange = (event) => {
+      const { name, value } = event.target;
+      setUserFormData({ ...userFormData, [name]: value });
+    };
+  
+    const handleFormSubmit = async (event) => {
+      event.preventDefault();
+  
+      // check if form has everything (as per react-bootstrap docs)
+      const form = event.currentTarget;
+      if (form.checkValidity() === false) {
+        event.preventDefault();
+        event.stopPropagation();
+      }
+  
+      try {
+        const { data } = await login({
+          variables: {...userFormData }, });
+  
+          Auth.login(data.login.token);
+
+      } catch (err) {
+        console.error(err);
+        setShowAlert(true);
+      }
+  
+      setUserFormData({
+        username: '',
+        email: '',
+        password: '',
+      });
+    };
+  
     return (
-        <div className="login-form-box">
-            <form className="login-form">
-                <div className="login-content">
-                    <h3 className="login-title">Sign In</h3>
-                    <div className="form-group mt-3">
-                        <label>Email:</label>
-                        <input 
-                            type="email"
-                            className="form-control mt-1"
-                            placeholder="Please enter your Email"
-                        />
-                    </div>
-                    <div className="form-group mt-3">
-                        <label>Password:</label>
-                        <input 
-                        type="password"
-                        className="form-control mt-1"
-                        placeholder="Please enter your password"
-                        />
-                    <div className="d-grid gap-2 mt-3">
-                        <button type="submit" className="btn btn-primary">
-                            Log In
-                        </button>
-                    </div>
-                    <p className="forgot-pasword text-right mt-2">
-                        Forgot <a href="#">password.</a>
-                    </p>
-                    </div>
-                </div>
-            </form>
-        </div>
+      <>
+        <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
+          <Alert dismissible onClose={() => setShowAlert(false)} show={showAlert} variant='danger'>
+            Something went wrong with your login credentials!
+          </Alert>
+          <Form.Group className='mb-3'>
+            <Form.Label htmlFor='email'>Email</Form.Label>
+            <Form.Control
+              type='text'
+              placeholder='Your email'
+              name='email'
+              onChange={handleInputChange}
+              value={userFormData.email}
+              required
+            />
+            <Form.Control.Feedback type='invalid'>Email is required!</Form.Control.Feedback>
+          </Form.Group>
+  
+          <Form.Group className='mb-3'>
+            <Form.Label htmlFor='password'>Password</Form.Label>
+            <Form.Control
+              type='password'
+              placeholder='Your password'
+              name='password'
+              onChange={handleInputChange}
+              value={userFormData.password}
+              required
+            />
+            <Form.Control.Feedback type='invalid'>Password is required!</Form.Control.Feedback>
+          </Form.Group>
+          <Button
+            disabled={!(userFormData.email && userFormData.password)}
+            type='submit'
+            variant='success'>
+            Submit
+          </Button>
+        </Form>
+      </>
     );
-};
+  };
+  
 
 export default Login;
